@@ -234,7 +234,11 @@ void changeMovie(){
      sun_play = false;
    disa_play = true;
    OscMessage msg = new OscMessage("/sequence");
-   msg.add(255,0,0,0);
+   msg.add(255);
+   msg.add(0);
+   msg.add(0);
+   msg.add(0);
+   msg.add(0);
    oscP5.send(msg, netAdd);
   
   }else if(sto == true){
@@ -245,7 +249,11 @@ void changeMovie(){
      sun_play = false;
     sto_play = true;
    OscMessage msg = new OscMessage("/sequence");
-   msg.add(0,255,0,0);
+   msg.add(0);
+   msg.add(255);
+   msg.add(0);
+   msg.add(0);
+   msg.add(0);
    oscP5.send(msg, netAdd);
 
   }else if(clo == true){
@@ -256,7 +264,11 @@ void changeMovie(){
      sun_play = false;
    clo_play= true;
    OscMessage msg = new OscMessage("/sequence");
-   msg.add(0,0,255,0);
+   msg.add(0);
+   msg.add(0);
+   msg.add(255);
+   msg.add(0);
+   msg.add(0);
    oscP5.send(msg, netAdd);
    
   }else if(sun == true){
@@ -267,7 +279,11 @@ void changeMovie(){
      clo_play= false;
    sun_play = true;
    OscMessage msg = new OscMessage("/sequence");
-   msg.add(0,0,0,255);
+   msg.add(0);
+   msg.add(0);
+   msg.add(0);
+   msg.add(255);
+   msg.add(0);
    oscP5.send(msg, netAdd);
 
   }else{
